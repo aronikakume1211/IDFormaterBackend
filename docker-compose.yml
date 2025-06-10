@@ -1,0 +1,12 @@
+version: '3.2'
+
+services:
+  national-id-processor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: national-id-processor:latest
+    container_name: national-id-processor-container
+    restart: unless-stopped
+    env_file: .env
+    network_mode: 'host'

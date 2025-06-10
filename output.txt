@@ -1,0 +1,59 @@
+የኢትዮጵያ ብሔራዊ መታወቂያ ፕሮግራም  |  ወሎሰፈር ቦሌ, የኢትዮ-ቻይና ጎዳና, አዲስ አበባ፣ ኢትዮጵያ
+9779  |   Id.gov.et  |   info@id.et      
+Ethiopian Digital ID Card
+የኢትዮጵያ ዲጂታል መታወቂያ ካርድ
+የትውልድ ቀን / Date of Birth
+ፆታ / SEX
+ዜግነት / Nationality
+ስልክ / Phone Number  
+ክልል / Region
+ክፍለ ከተማ / ዞን / Subcity / zone 
+ወረዳ / Woreda  
+Demographic Data | የስነ ሕዝብ መረጃ 
+ሙሉ ስም /  First, Middle, Surname  
+FCN:
+በኢትዮጵያ ዲጂታል መታወቂያ አዋጅ መሠረት (id.et/law) ማንኛውም የካርድ ምስክር ወረቀት 
+ከብሄራዊ መታወቂያ ፕሮግራም ሲስተም (ፋይዳ) ታትሞ የተገኘ ወይም በቀጥታ የሚታተም ህጋዊ 
+የማንነት መገለጫዎች ናቸው።
+As per the Ethiopian Digital ID Proclamation (id.et/law) any card credentials 
+printed or accessed for print directly from the National ID system (Fayda) are 
+valid forms of legal Identity.
+01
+ነዋሪዎች/አገልግሎቶች አቅራቢዎች እራሳቸውን ከአጭበርባሪ/ከተለያዩ የማጭበርበር ድርጊቶች 
+ለመከላከል እና ለመጠበቅ ከዚህ በታች ያለውን የQR ኮድስካን በማድረግ ማረጋገጥ ይችላሉ።
+02
+Residents/services providers can scan the QR code below to verify and 
+protect themselves from fraudulent actors/activities .
+በዚህ መታወቂያ ዜግነት፣ አድራሻ እና የልደት ቀንን 
+በተመለከተ የተገለፁት መረጃዎች በተመዝጋቢው መግለጫ 
+መሰረት የተሞሉ ናቸው ፤ የኋላ ታሪክ ማረጋገጫ 
+የላቸውም።
+03
+Personal data ﬁelds such as nationality, 
+address, and date of birth provided on this ID, 
+are based on the declarations made by the 
+registrant. Hence, background-check has not 
+been conducted for their authenticity.
+Disclaimer | ማሳሰቢያ 
+እዚህ
+ይቁረጡ 
+እዚህ
+ይቁረጡ 
+Disclaimer: For your personal use only!
+ማሳሰቢያ፡ ለእርስዎ አገልገሎት ብቻ!
+02/05/1994
+2002/01/10
+ሴት
+Female
+ኢትዮጵያዊ
+Ethiopian
+0955431253
+አዲስ አበባ
+Addis Ababa
+ለሚ ኩራ
+Lemi Kura
+ወረዳ 03
+Woreda 03
+4258 3475 6457 0490
+ወርቅነሽ ተገኝ የኋላው
+Worknesh Tegegn Yehualaw

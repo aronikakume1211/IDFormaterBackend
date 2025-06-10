@@ -1,0 +1,4 @@
+PyMuPDF
+Flask
+requests
+Pillow
