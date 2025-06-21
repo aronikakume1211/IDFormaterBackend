@@ -162,6 +162,7 @@ def extract_format2(text, image_paths):
 
     return result
 
+
 def remove_white_background(img: Image.Image, threshold=240) -> Image.Image:
     """Convert near-white pixels to transparent."""
     img = img.convert("RGBA")
@@ -178,6 +179,7 @@ def remove_white_background(img: Image.Image, threshold=240) -> Image.Image:
     img.putdata(newData)
     return img
 
+
 def extract_from_pdf_as_json(pdf_path, output_folder):
     doc = fitz.open(pdf_path)
     os.makedirs(output_folder, exist_ok=True)
@@ -187,9 +189,9 @@ def extract_from_pdf_as_json(pdf_path, output_folder):
     for page_num, page in enumerate(doc):
         text = page.get_text()
         cleaned_text = text.replace(" ", "")
-        fcn_match = re.search(r'(\d{16})', cleaned_text)
+        fcn_match = re.search(r"(\d{16})", cleaned_text)
         fcn_id = fcn_match.group(1) if fcn_match else f"page{page_num+1}"
-        
+
         with open("output.txt", "w", encoding="utf-8") as file:
             file.write(text)
 
@@ -200,20 +202,33 @@ def extract_from_pdf_as_json(pdf_path, output_folder):
             base_image = doc.extract_image(xref)
             image_bytes = base_image["image"]
             image_ext = base_image["ext"]
-            
-             # Load and convert image
-            pil_img = Image.open(io.BytesIO(image_bytes)).convert("L")  # Grayscale
-            rgba_img = pil_img.convert("RGBA")  # Required before making transparent
-            no_bg_img = remove_white_background(rgba_img)
-            
+
+            # Load the original image
             pil_img = Image.open(io.BytesIO(image_bytes))
-            # bw_image = pil_img.convert("L")
-            image_filename = f"img_{fcn_id}_{img_index+1}.png"
-            image_path = os.path.join(output_folder, image_filename)
-            with open(image_path, "wb") as img_file:
-                img_file.write(image_bytes)
-            no_bg_img.save(image_path)
-            image_paths.append(f"images/{image_filename}")
+
+            # Apply background removal to the original image
+            no_bg_original_img = remove_white_background(pil_img)
+
+            # Save the original image with background removed
+            original_image_filename = f"img_{fcn_id}_{img_index+1}_original.png"
+            original_image_path = os.path.join(output_folder, original_image_filename)
+            no_bg_original_img.save(original_image_path)
+
+            # Convert to grayscale then to RGBA
+            grayscale_img = pil_img.convert("L")
+            rgba_img = grayscale_img.convert("RGBA")
+
+            # Apply background removal to the RGBA image
+            no_bg_processed_img = remove_white_background(rgba_img)
+
+            # Save the processed image
+            processed_image_filename = f"img_{fcn_id}_{img_index+1}.png"
+            processed_image_path = os.path.join(output_folder, processed_image_filename)
+            no_bg_processed_img.save(processed_image_path)
+
+            # Add processed image path to list
+            # image_paths.append(f"images/{processed_image_filename}")
+            image_paths.append(f"images/{original_image_filename}")
 
         # Extract personal info
         personal_info = extract_personal_section(text, image_paths=image_paths)

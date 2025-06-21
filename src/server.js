@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 4444;
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:5173", "https://faydaprint.com"],
+  origin: ["http://localhost:5174", "https://idformatter.netlify.app/"],
   credentials: true,
 }));
 app.use(morgan("dev"));

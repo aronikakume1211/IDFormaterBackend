@@ -46,9 +46,9 @@ router.post("/", validatePaymentRequest, async (req, res) => {
   const tx_ref = `addissoftware-${name.split(" ")[0].toLowerCase()}-${Date.now()}`;
 
   const planMapping = {
-    1000: "basic",
-    1800: "enterprise",
-    2400: "pro",
+    699: "basic",
+    999: "enterprise",
+    1299: "pro",
   };
 
   if (!planMapping[amount]) {
